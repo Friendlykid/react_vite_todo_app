@@ -36,6 +36,17 @@ function App() {
         setNewTask('');
     }
 
+    function handleSaveTask(taskToSave){
+
+        setTasks(tasks.map(t =>{
+            if(t.id === taskToSave.id){
+                return taskToSave;
+            }else{
+                return t;
+            }
+        }))
+    }
+
     useEffect(() => {
         const storedTasks = localStorage.getItem(localStorageKey);
         if(storedTasks){
@@ -53,7 +64,10 @@ function App() {
             handleClick={handleAddTask}
             error={error}/>
         <hr/>
-        <Tasks tasks={tasks} handleDeleteTask={handleDeleteTask}></Tasks>
+        <Tasks tasks={tasks}
+               handleDeleteTask={handleDeleteTask}
+               handleSaveTask={handleSaveTask}>
+        </Tasks>
     </>
   )
 }

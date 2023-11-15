@@ -61,7 +61,7 @@
   font-weight: 500;
   font-family: inherit;
   background-color: #1a1a1a;
-  cursor: pointer;
+  cursor: text;
   transition: border-color 0.25s;
 }
 
@@ -72,4 +72,48 @@
 .error-message {
   color: red;
   margin-top: 5px;
+}
+
+.tasks {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: stretch;
+  margin-top: 1em;
+}
+.task {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: stretch;
+  border-radius: 8px;
+  border: 1px solid #f9f9f9;
+  margin: 0.2em;
+}
+
+.task p {
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+}
+.fa-trash{
+  padding: 1.5em;
+}
+
+.fa-trash:hover{
+  color: red;
+  transition: color 0.25s;
+
+}
+
+.fa-pen-to-square{
+  padding: 0.5em;
+}
+
+.fa-pen-to-square:hover{
+  color: #4c81fc;
+  transition: color 0.25s;
 }
